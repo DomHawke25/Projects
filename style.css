@@ -34,7 +34,7 @@ html {
 }
 
 .profilePic {
-    width: 80%;
+    width: 70%;
     aspect-ratio: 1 / 1;
     margin: 10% auto;
     border-radius: 100%;
@@ -57,7 +57,7 @@ html {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 20px solid black;
+    border-left: 15px solid black;
 }
 
 @media screen and (max-width: 800px) {
@@ -67,18 +67,19 @@ html {
         transition: left 300ms linear;
     }
 
-    .sidebar:active {
-        left: 0;
-    }
-
-    .sidebar:active .arrow{
-        border-left: 0;
-        border-right: 20px solid black;
-    }
-
     .sidebarArrow {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    /* Styles used when sidebar is active */
+    .sidebarActive {
+        left: 0;
+    }
+
+    .leftArrow{
+        border-left: 0;
+        border-right: 15px solid black;
     }
 }
