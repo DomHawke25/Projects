@@ -1,7 +1,24 @@
-html {
+/*** Universal Styles ***/
+
+html, * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+
+body, header, main, footer {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*========================= SIDEBAR =========================*/
 
 /*** Formatting for Sidebar - Desktop Site ***/
 
@@ -23,6 +40,8 @@ html {
 
 .sidebarMain h1 {
     font-size: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
     font-weight: bold;
     text-align: center;
 }
@@ -38,10 +57,6 @@ html {
     aspect-ratio: 1 / 1;
     margin: 10% auto;
     border-radius: 100%;
-}
-
-.profilePic img {
-    width: 100%;
 }
 
 /*** Formatting for Sidebar - Mobile view ***/
@@ -78,8 +93,109 @@ html {
         left: 0;
     }
 
-    .leftArrow{
+    .leftArrow {
         border-left: 0;
         border-right: 15px solid black;
     }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+}
+
+/*==================== MAIN PAGE / HEADER ====================*/
+
+/*** Formatting for Main Page - Desktop Site ***/
+
+header, main, footer {
+    width: 75%;
+    margin-left: auto;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5px;
+}
+
+header a {
+    margin: 10px 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-shadow: 2px 2px 5px grey;
+    transform: translate(-2px, -2px);
+}
+
+.headerIcon {
+    width: 50px;
+    margin: 10px 5px;
+}
+
+.headerIcon:hover {
+    transform: translate(-2px, -2px);
+}
+
+/*** Formatting for Main Page - Mobile view ***/
+
+@media screen and (max-width: 800px) {
+    header, main, footer {
+        width: calc(100% - 25px);
+    }
+}
+
+/*========================= Tiles =========================*/
+
+/*** Formatting for Tiles - Desktop Site ***/
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 15.5%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+    margin: 1% 0.5%;
+    border-radius: 25%;
+    background-color: green;
+    transition: transform 100ms ease-in;
+}
+
+.tile:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 8px 8px 10px black;
+}
+
+@media screen and (max-width: 1200px) {
+    .tile {
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .tile {
+        width: 24%;
+    }
+}
+
+/*========================= Footer =========================*/
+
+footer {
+    height: 25px;
+    padding-right: 20px;
+    text-align: right;
 }

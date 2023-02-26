@@ -3,7 +3,8 @@ let sidebar = document.getElementById("sidebar");
 
 sidebar.onclick = () => {
     sidebar.classList.toggle("sidebarActive");
-    document.getElementById("arrow").classList.toggle("leftArrow")
+    document.getElementById("arrow").classList.toggle("leftArrow");
+    document.getElementById("overlay").classList.toggle("overlay");
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -12,6 +13,7 @@ window.onclick = (event) => {
         if (sidebar.classList.contains("sidebarActive")) {
             sidebar.classList.remove("sidebarActive");
             document.getElementById("arrow").classList.remove("leftArrow");
+            document.getElementById("overlay").classList.remove("overlay");
         }
     }
 }
