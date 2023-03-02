@@ -132,6 +132,10 @@ header a {
     font-weight: bold;
 }
 
+header a:link, header a:visited {
+    color: black;
+}
+
 header a:active {
     transform: scale(0.9, 0.9);
 }
