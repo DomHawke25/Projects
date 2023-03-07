@@ -249,9 +249,22 @@ header a:active {
 @media screen and (max-width: 900px) {
     /* 4 Tiles per row */
     .wrapper {
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
+
+
+/*** Formatting for tiles - Mobile View ***/
+@media screen and (max-width: 800px) {
+    .tile img {
+        width: 50%;
+    }
+
+    .tile p {
+        font-size: 0.75rem;
+    }
+}
+
 
 /*========================= Footer =========================*/
 
