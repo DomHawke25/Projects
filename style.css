@@ -9,6 +9,16 @@ body, header, main, footer {
     margin: 0;
 }
 
+body {
+    background: linear-gradient(to right, #ADA996 25%, #F2F2F2, #DBDBDB, #EAEAEA);
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background: linear-gradient(to right, #ADA996, #F2F2F2, #DBDBDB, #EAEAEA);
+    }
+}
+
 img {
     width: 100%;
     max-width: 100%;
@@ -29,8 +39,9 @@ a {
     left: 0;
     width: 25%;
     height: 100%;
-    background-image: linear-gradient(to bottom right, rgb(242, 217, 242), rgb(153, 51, 153));
+    background-image: linear-gradient(to bottom right, #6190E8, #A7BFE8);
     z-index: 5;
+    border-right: 1px solid black;
 }
 
 .sidebarMain {
@@ -176,44 +187,69 @@ header a:active {
 .wrapper {
     width: 95%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .tile {
-    width: 15.5%;
     aspect-ratio: 1 / 1;
-    border: 1px solid black;
-    margin: 1% 0.5%;
+    margin: 5px;
     border-radius: 25%;
-    background-color: green;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     transition: transform 100ms ease-in;
     cursor: pointer;
+    /* glass effect */
+    background: rgba( 74, 144, 226, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    /* contents */
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tile:active {
     transform: scale(0.9, 0.9);
 }
 
+.tile a:link, .tile a:visited {
+    color: black;
+}
+
+.tile img {
+    width: 75%;
+}
+
+.tile p {
+    font-weight: 600;
+    margin: 1px 0;
+}
+
+.inProgress {
+    color: darkred;
+}
+
 @media screen and (min-width: 801px) {
     /* Hover effect for Desktop site only */
     .tile:hover {
-        transform: scale(1.2, 1.2);
-        box-shadow: 8px 8px 10px black;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.7 );
     }
 }
 
 @media screen and (max-width: 1200px) {
     /* 5 Tiles per row */
-    .tile {
-        width: 19%;
+    .wrapper {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media screen and (max-width: 900px) {
     /* 4 Tiles per row */
-    .tile {
-        width: 24%;
+    .wrapper {
+        grid-template-columns: repeat(4,1fr);
     }
 }
 
