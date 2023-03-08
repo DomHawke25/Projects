@@ -32,4 +32,4 @@ header.appendChild(viewCodeLabel);
 // Create Github Icon
 createIcon("https://domhawke25.github.io/Projects/images/icons8-github-96.png", "github icon by icons8.com", "https://github.com/DomHawke25");
 // Create Linked In Icon
-createIcon("https://domhawke25.github.io/Projects/images/icons8-linkedin-96.png", "Linked In icon by icons8.com", "");
+createIcon("https://domhawke25.github.io/Projects/images/icons8-linkedin-96.png", "Linked In icon by icons8.com", "https://www.linkedin.com/in/dominic-hawke/");
