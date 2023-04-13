@@ -253,6 +253,13 @@ header a:active {
     }
 }
 
+@media screen and (max-width: 500px) {
+    /* 3 Tiles per row */
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 /*** Formatting for tiles - Mobile View ***/
 @media screen and (max-width: 600px) {
